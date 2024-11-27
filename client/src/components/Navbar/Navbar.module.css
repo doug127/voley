@@ -1,0 +1,63 @@
+.body {
+  background: rgba(255, 255, 255, 0);
+  min-height: 12vh;
+}
+
+.navAni {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.8s;
+  padding: 1.5rem 4rem;
+  z-index: 10000;
+}
+
+.leftGroup {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex: 1;
+}
+
+.rightGroup {
+  display: flex;
+  justify-content: end;
+  flex: 1;
+}
+
+.a {
+  padding: 0.5rem 1rem;
+  transition: 0.4s;
+}
+
+.a:hover {
+  padding: 0.5rem 1rem;
+  background-color: #e6ac17;
+  color: rgb(13, 41, 90);
+  transition: 0.4s;
+}
+
+.sticky {
+  padding: 0.5rem 3rem;
+  background: linear-gradient(
+    180deg,
+    rgba(19, 67, 149, 1) 0%,
+    rgba(19, 67, 149, 0.5) 90%,
+    rgba(19, 67, 149, 0.1) 100%
+  );
+}
+
+.sticky .a,
+.sticky .span {
+  color: rgb(255, 255, 255);
+}
+
+.sticky .a:hover {
+  padding: 0.5rem 1rem;
+  background-color: #e6ac17;
+  color: rgb(13, 41, 90);
+}

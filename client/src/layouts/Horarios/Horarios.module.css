@@ -1,0 +1,9 @@
+.card {
+  background: #cfcfcf88;
+  border-radius: 1rem;
+}
+
+.button {
+  background: rgba(19, 67, 149, 0.7) 0%;
+  border-radius: 0.3rem;
+}

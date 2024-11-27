@@ -21,7 +21,10 @@ exports.addAtleta = async (req, res) => {
   try {
     const nuevoAtleta = new Atleta(req.body);
     const atletaGuardado = await nuevoAtleta.save();
-    res.json(atletaGuardado);
+    res.json({
+      message: "Su información fue almacenada con éxito",
+      atletaGuardado,
+    });
   } catch (error) {
     console.error("Error al agregar atleta:", error);
     res.status(500).json({ error: "Error en el servidor" });
