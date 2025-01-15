@@ -27,18 +27,20 @@ export const Card = () => {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <>
+    <div className="flex">
       {data.map((atleta) => (
         <Link
           key={atleta._id}
           to="#"
-          className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+          className={`flex max-w-sm p-6 flex-wrap rounded-lg shadow ${CardStyles.container_card}`}
         >
           <div className="flex-col">
             <div className="flex justify-between items-start">
-              <div className={`flex-col`}>
-                <h6 className={`text-5xl pb-2`}>{atleta.number}</h6>
-                <h6 className={`text-1xl pb-8`}>{atleta.position}</h6>
+              <div className={`flex-col ${CardStyles.left}`}>
+                <h6 className={`text-5xl pb-2 text-center`}>{atleta.number}</h6>
+                <h6 className={`text-1xl pb-8 text-center`}>
+                  {atleta.position}
+                </h6>
                 <div className="flex justify-center">
                   <img
                     src="../../../public/assets/images/vzla.jpg"
@@ -60,16 +62,15 @@ export const Card = () => {
               </div>
             </div>
             <div className={`flex justify-center ${CardStyles.title}`}>
-              <h6>{atleta.first_name}&nbsp;</h6>
-              <h6>{atleta.last_name}</h6>
+              <h6 className={`text-2xl`}>{atleta.first_name}&nbsp;</h6>
+              <h6 className={`text-2xl`}>{atleta.last_name}</h6>
             </div>
-          </div>
-
-          <div className={`flex justify-center`}>
-            <h6>{atleta.category}</h6>
+            <div className={`flex justify-center`}>
+              <h6>{atleta.category}</h6>
+            </div>
           </div>
         </Link>
       ))}
-    </>
+    </div>
   );
 };
