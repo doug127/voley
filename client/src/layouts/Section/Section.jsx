@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import sectionStyles from "./Section.module.css";
 
-export const Section = () => {
-  const images = ["../../public/assets/images/Bg image.png"];
-
+export const Section = ({ bg }) => {
+  
   return (
     <>
-      <div className={`${sectionStyles.body} `}>
+      <div
+        className={`${sectionStyles.body} `}
+        style={{ backgroundImage: `url(${bg})` }}
+      >
         <div
           className={`${sectionStyles.container} flex justify-center items-center`}
         >

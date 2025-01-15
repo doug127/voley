@@ -9,7 +9,7 @@ export const Fundador = () => {
         </h2>
         <div className={`flex justify-center pt-24 pb-10`}>
           <img
-            src="../../../public/assets/pictures/Nishida.png"
+            src="../../../assets/pictures/Nishida.png"
             className={`${FundadorStyles.picture}`}
             alt=""
           />

@@ -1,33 +1,32 @@
-import HorariosStyles from "./Horarios.module.css";
+import PlanessStyles from "./Planes.module.css";
 
-export const Horarios = () => {
+export const Planes = () => {
   const container = `
     flex justify-evenly items-center py-20 px-16
   `;
 
   return (
     <>
-      <h2 className={`text-center font-semibold text-4xl pt-20`}>
-        HORARIOS Y PLANES
-      </h2>
+      <h2 className={`text-center font-semibold text-4xl pt-20`}>PLANES</h2>
       <div className={`${container}`}>
-        {data.map((d) => (
+        {data.map((d, index) => (
           <div
-            className={`${HorariosStyles.card} mx-4 flex justify-center items-center p-2 flex-col`}
+            className={`${PlanessStyles.card} mx-4 flex justify-center items-center p-2 flex-col`}
+            key={index}
           >
-            <div className={`${HorariosStyles.header} py-6`}>
+            <div className={`${PlanessStyles.header} py-6`}>
               <h2 className={`text-2xl `}>{d.title}</h2>
             </div>
-            <div className={`${HorariosStyles.body} pb-4 px-8 text-center`}>
+            <div className={`${PlanessStyles.body} pb-4 px-8 text-center`}>
               <h4 className={`text-center text-xl font-bold pb-8`}>
                 {d.price}$
               </h4>
               <p>{d.p}</p>
             </div>
-            <div className={`${HorariosStyles.footer} pb-6`}>
+            <div className={`${PlanessStyles.footer} pb-6`}>
               <button
                 type="button"
-                className={`${HorariosStyles.button} py-2 px-4`}
+                className={`${PlanessStyles.button} py-2 px-4`}
               >
                 Ver más
               </button>

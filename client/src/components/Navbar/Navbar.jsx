@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import navStyles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,8 +37,8 @@ export const Navbar = () => {
     <div className={`${navStyles.body}`}>
       <nav className={`${navStyles.navAni}`}>
         <div className={`${navStyles.leftGroup}`}>
-          <a
-            href="home"
+          <Link
+            to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
@@ -48,7 +49,7 @@ export const Navbar = () => {
             <span className={`${navStyles.span} text-white self-center`}>
               E.C.I.D. Mesa de Cavacas
             </span>
-          </a>
+          </Link>
         </div>
         <div className={`${navStyles.rightGroup} flex`}>
           <button
@@ -86,28 +87,28 @@ export const Navbar = () => {
               className={`font-medium flex flex-col p-4 md:p-0 mt-4 border  rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0`}
             >
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className={`${navStyles.a} ${a}`}
                   aria-current="page"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className={`${navStyles.a} ${a}`}>
+                <Link to="/plantilla" className={`${navStyles.a} ${a}`}>
                   Plantilla
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className={`${navStyles.a} ${a}`}>
+                <Link to="#" className={`${navStyles.a} ${a}`}>
                   Sobre Nosotros
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className={`${navStyles.a} ${a}`}>
+                <Link to="#" className={`${navStyles.a} ${a}`}>
                   Contacto
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
